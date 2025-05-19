@@ -47,6 +47,46 @@ class Vector<T extends Any & Addable<T>> extends Any implements Addable<Vector<T
   }
 }
 
+interface Addable<T extends Any> {
+  T add(T other);
+}
+
+class General {}
+
+class Any extends General {}
+
+final class None extends Any {
+  private static final None INSTANCE = new None();
+
+  private None() {}
+
+  public static None getInstance() {
+    return INSTANCE;
+  }
+}
+
+class Number extends Any implements Addable<Number> {
+
+  private final Integer value;
+
+  public Number(int value) {
+    this.value = value;
+  }
+
+  @Override
+  public Number add(Number other) {
+    return new Number(this.value + other.getValue());
+  }
+
+  public int getValue() {
+    return this.value;
+  }
+
+  public String toString() {
+    return String.valueOf(this.value);
+  }
+}
+
 class Example {
   public static void main(String[] args) {
     // Создание и заполнение простых векторов
