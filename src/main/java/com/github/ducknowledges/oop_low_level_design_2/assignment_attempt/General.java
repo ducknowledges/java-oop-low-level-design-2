@@ -4,16 +4,15 @@ import java.io.Serializable;
 
 class General implements Serializable {
 
-    @SuppressWarnings("unchecked")
-    public static <T extends General> T assignmentAttempt(Object source, Class<T> targetClass) {
-        if (!targetClass.isInstance(source)) {
-            return (T) new None();
-        }
-        return (T) source;
+  @SuppressWarnings("unchecked")
+  public static <T extends General> T assignmentAttempt(Object source, Class<T> targetClass) {
+    if (!targetClass.isInstance(source)) {
+      return (T) new None();
     }
-
+    return (T) source;
+  }
 }
 
-class Any extends General { }
+class Any extends General {}
 
-final class None extends Any /*A, B, ....*/ { }
+final class None extends Any {}

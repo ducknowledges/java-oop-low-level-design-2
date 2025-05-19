@@ -26,7 +26,6 @@ abstract class Vehicle {
   public abstract int getFuelLevelInPercent();
 
   public abstract String getType();
-
 }
 
 // Наследование: ElectricCar является (is-a) транспортным средством Vehicle
@@ -50,7 +49,6 @@ class ElectricCar extends Vehicle {
   public String getType() {
     return "Electric Car";
   }
-
 }
 
 // Наследование: PetrolCar является (is-a) транспортным средством Vehicle
@@ -74,7 +72,6 @@ class PetrolCar extends Vehicle {
   public String getType() {
     return "Petrol Car";
   }
-
 }
 
 // Абстрактный базовый класс для хранилищ энергии
@@ -89,7 +86,6 @@ abstract class FuelStorage {
   public int getLevelInPercent() {
     return levelPercent;
   }
-
 }
 
 // Наследование: Tank является (is-a) хранилищем энергии EnergyStorage
@@ -98,7 +94,6 @@ class Tank extends FuelStorage {
   public Tank(int initialLevel) {
     super(initialLevel);
   }
-
 }
 
 // Наследование: Battery является (is-a) хранилищем энергии EnergyStorage
@@ -107,5 +102,4 @@ class Battery extends FuelStorage {
   public Battery(int initialLevel) {
     super(initialLevel);
   }
-
 }
