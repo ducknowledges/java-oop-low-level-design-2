@@ -1,4 +1,4 @@
-package com.github.ducknowledges.oop_low_level_design_2.Inheritance_polymorphism_generics;
+package com.github.ducknowledges.oop_low_level_design_2.inheritance_polymorphism_generics;
 
 class General {}
 
